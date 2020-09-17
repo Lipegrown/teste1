@@ -4,30 +4,32 @@ package entities;
 
 public class Contribuente {
 	
-	protected  Integer cpf;
+	protected  Long cpf;
 	protected String name;
 	protected Integer nuberContriuente;
 	protected Double salary;
 	
 	
 	
+	
 
 
-	public Contribuente(Integer cpf, String name, Integer nuberContriuente, Double salary) {
+	public Contribuente(Long cpf, String name, Integer nuberContriuente, Double salary) {
 		this.cpf = cpf;
 		this.name = name;
 		this.nuberContriuente = nuberContriuente;
 		this.salary = salary;
 		
+		
 	}
 
 
-	public Integer  getCpf() {
+	public Long  getCpf() {
 		return cpf;
 	}
 
 
-	public void setCpf(Integer cpf) {
+	public void setCpf(Long cpf) {
 		this.cpf = cpf;
 	}
 
@@ -60,6 +62,13 @@ public class Contribuente {
 	public void setSalary(Double salary) {
 		this.salary = salary;
 	}
+	
+	
+	
+	public String toString() {
+		return name + " " + String.format("%.2f", salary);
+	}
+	
 	
 
 	
